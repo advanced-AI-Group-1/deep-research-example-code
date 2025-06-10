@@ -1,4 +1,4 @@
-# 딥러닝 기반 자동 연구 에이전트
+# 심층분석 예제 코드
 
 이 프로젝트는 LangChain과 LangGraph를 활용하여 특정 주제에 대한 자동 연구 보고서를 생성하는 딥러닝 기반 에이전트를 구현합니다.
 
@@ -102,11 +102,22 @@ show_graph_now()
 1. **Anthropic API 키**: Claude 3.5 Haiku 모델 사용
 2. **Tavily API 키**: 웹 검색 기능 사용
 
-`.env` 파일에 다음과 같이 설정하세요:
+`.env.example` 파일은 프로젝트에 필요한 환경 변수의 템플릿을 제공합니다. 이 파일에는 다음과 같은 API 키와 설정이 포함되어 있습니다:
+
+- **ANTHROPIC_API_KEY**: Claude 모델 사용을 위한 API 키
+- **TAVILY_API_KEY**: 웹 검색 기능을 위한 API 키
+- **OPENAI_API_KEY**: OpenAI 모델로 전환할 경우 사용하는 API 키
+- **PERPLEXITY_API_KEY**: Perplexity AI 모델 사용을 위한 API 키
+- **GROQ_API_KEY**: Groq API 사용을 위한 키
+- **LINKUP_API_KEY**: LinkUp 검색 엔진 사용을 위한 키
+- **LANGCHAIN_TRACING_V2**: LangSmith 로깅 활성화 설정
+- **LANGCHAIN_ENDPOINT**: LangSmith API 엔드포인트
+- **LANGCHAIN_API_KEY**: LangSmith API 키
+- **LANGCHAIN_PROJECT**: LangSmith 프로젝트명
+
+이 파일을 `.env`로 복사한 후 필요한 API 키를 입력하여 사용하세요.
 
 ```
-ANTHROPIC_API_KEY=your_anthropic_api_key
-TAVILY_API_KEY=your_tavily_api_key
+cp .env.example .env
+# 그 후 .env 파일을 편집하여 필요한 API 키 입력
 ```
-
-
